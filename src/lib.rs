@@ -1,6 +1,5 @@
 extern crate num;
 use num::BigUint;
-use std::ops::Add;
 
 mod utils;
 
@@ -22,13 +21,12 @@ extern {
     fn error(s: &str);
 }
 
-
-pub fn fib(n: usize) -> BigUint {
-    let mut i1 = BigUint::from(0usize); let mut i2 = BigUint::from(1usize);
+pub fn fib(n: u32) -> BigUint {
+    let mut i1 = BigUint::from(0u8); let mut i2 = BigUint::from(1u8);
     let mut scratch;
 
     for x in 0..n {
-        scratch = i1.add(&i2);
+        scratch = i1 + &i2;
         i1 = i2;
         i2 = scratch;
     }
@@ -37,6 +35,11 @@ pub fn fib(n: usize) -> BigUint {
 }
 
 #[wasm_bindgen]
+pub fn fib_s(n: u32) -> String {
+    return fib(n).to_str_radix(10);
+}
+
+#[wasm_bindgen]
 pub fn greet() {
-    log(&format!("{}", fib(5000)))
+    log(&format!("{}", fib(500000)))
 }
