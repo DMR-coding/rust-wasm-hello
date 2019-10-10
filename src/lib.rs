@@ -25,7 +25,7 @@ pub fn fib(n: u32) -> BigUint {
     let mut i1 = BigUint::from(0u8); let mut i2 = BigUint::from(1u8);
     let mut scratch;
 
-    for x in 0..n {
+    for _ in 0..n {
         scratch = i1 + &i2;
         i1 = i2;
         i2 = scratch;

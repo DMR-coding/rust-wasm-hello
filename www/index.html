@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
+    <script src="init.js"></script>
     <title>Hello rust!</title>
   </head>
   <body>
-    Hi there!
+  <h6>Calculate the Fibonacci number at position: <input id="iterations" type="number" value="75"/><button id="go_btn">Go</button></h6>
+    <div id="time_output" style="white-space: pre"></div>
+    <div id="value_output" style="width:500px; word-wrap: break-word"></div>
+
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
-    <script src="init.js"></script>
   </body>
 </html>
