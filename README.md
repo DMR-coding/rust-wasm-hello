@@ -3,3 +3,5 @@ A quick demonstration of using Rust in the browser via `wasm-pack`. Build with `
 Read a quick tutorial on rust with wasm here: https://rustwasm.github.io/book/game-of-life/introduction.html
 
 Read more about the binding syntax here: https://rustwasm.github.io/docs/wasm-bindgen/introduction.html
+
+Use it on the web here: https://dmr-coding.github.io/rust-wasm-hello/www/dist
