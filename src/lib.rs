@@ -38,8 +38,3 @@ pub fn fib(n: u32) -> BigUint {
 pub fn fib_s(n: u32) -> String {
     return fib(n).to_str_radix(10);
 }
-
-#[wasm_bindgen]
-pub fn greet() {
-    log(&format!("{}", fib(500000)))
-}

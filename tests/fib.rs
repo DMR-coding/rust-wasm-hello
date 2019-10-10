@@ -6,7 +6,10 @@ use num::BigUint;
 
 #[test]
 fn test_base_cases() {
-
+    assert_eq!(fib(0).to_str_radix(10), "0");
+    assert_eq!(fib(1).to_str_radix(10), "1");
+    assert_eq!(fib(2).to_str_radix(10), "1");
+    assert_eq!(fib(3).to_str_radix(10), "2");
 }
 
 #[test]
